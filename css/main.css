@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.body {
+	margin: 0;
+	font-family: "Noto Sans", sans-serif;
+}
+
+.container {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+.nav {
+	padding: 40px 0;
+}
+
+.nav__row {
+	display: flex; /* все вложенные элементы выстроятся в ряд */
+	justify-content: flex-start; /* Блоки прижаты к началу главной оси */
+	align-items: center;
+}
+
+.nav__logo,
+a.nav__logo {
+	margin-right: 83px;
+	text-decoration: none;
+	font-family: "Noto Sans";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 28px;
+	line-height: 38px;
+	color: #000000;
+}
+a.nav__logo:hover {
+	text-decoration: underline;
+}
+
+.nav__list {
+	display: flex;
+	font-family: "Noto Sans";
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.nav__item {
+	margin-right: 30px;
+	font-size: 18px;
+}
+
+.nav__item:last-child {
+	margin-right: 0;
+}
+
+.nav__link {
+	text-decoration: none;
+	color: #000;
+}
+
+.nav__link:hover {
+	color: #f72464;
+}
+
+.nav__cart {
+	/*позиционируем корзину*/
+	margin-left: auto; /* предоставляtn браузеру самостоятельно вычислять отступ элемента */
+}
+
+.nav__cart-link {
+	position: relative;
+	top: 5px;
+	display: inline-block;
+	padding: 5px;
+}
+
+/*пропишем положение красного кружочка*/
+.nav__cart-number {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	color: #fff;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	line-height: 20px;
+	background: #f72464;
+}
+
+.header__row {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.header__content {
+	position: absolute;
+	width: 670px;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.header__title {
+	margin: 0;
+	margin-bottom: 20px;
+	font-family: "Playfair Display", serif;
+	font-weight: normal;
+	font-size: 72px;
+	line-height: 96px;
+}
+
+.header__text {
+	margin-bottom: 60px;
+	font-family: "Noto Sans";
+	font-size: 22px;
+	line-height: 1.5;
+}
+
+.button {
+	/*Что бы корректно работали свойста блочной модели пропишем : */
+	display: inline-block; /*ширина при этом будет по ширине контента и не будет растягиваться*/
+	padding: 11px 33px 14px;
+	background-color: #f72464;
+	box-shadow: 0px 4px 15px rgba(123, 12, 46, 0.35);
+	border-radius: 4px;
+	font-family: "Playfair Display", serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 26px;
+	line-height: 1;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+
+	/*для применении hover пропишем плавность изменения тени и фона*/
+	transition: box-shadow 0.2s ease-in, background-color 0.2s ease-in;
+}
+
+.button:hover {
+	box-shadow: 0px 4px 35px rgba(123, 12, 45, 0.76);
+	background-color: #f3034b;
+}
