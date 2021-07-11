@@ -14,6 +14,10 @@
 	margin: 0 auto;
 }
 
+.none {
+	display: none;
+}
+
 .nav {
 	padding: 40px 0;
 }
@@ -146,4 +150,117 @@ a.nav__logo:hover {
 .button:hover {
 	box-shadow: 0px 4px 35px rgba(123, 12, 45, 0.76);
 	background-color: #f3034b;
+}
+
+.featured-section {
+	padding-top: 60px;
+	padding-bottom: 70px;
+}
+
+.section-header {
+	margin-bottom: 40px;
+}
+.section-header__title {
+	margin: 0;
+	margin-bottom: 10px;
+	font-family: "Playfair Display", serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 42px;
+	line-height: 56px;
+	text-align: center;
+	color: #000000;
+}
+
+.section-header__description {
+	font-family: "Noto Sans";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 19px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #999999;
+}
+
+.section-header__description p {
+	margin-top: 0;
+}
+
+.products-wrapper {
+	margin-bottom: 40px;
+	display: flex;
+	flex-wrap: wrap; /*сделали перенос элементов блока*/
+	justify-content: space-between;
+	row-gap: 40px; /*отступ между рядами блока*/
+}
+
+.product-link {
+	display: inline-block; /*делаем ссылку строчно-блочным элементом*/
+	text-decoration: none;
+	transition: opacity 0.2s ease-in;
+}
+.product-link:hover {
+	opacity: 0.8;
+}
+
+.product {
+	text-align: center;
+	max-width: 270px;
+}
+.product__img {
+	display: block;
+	margin-bottom: 12px;
+}
+
+.product__title {
+	margin: 0; /*удаляем отступы по умолчанию для заголовков*/
+	margin-bottom: 12px;
+	font-family: "Playfair Display", serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 27px;
+	color: #000000;
+}
+.product__price {
+	font-size: 14px;
+	line-height: 19px;
+	text-transform: uppercase;
+	font-family: "Noto Sans";
+}
+.product__price-old {
+	margin-bottom: 10px;
+	color: #999999;
+}
+.product__price-new {
+	font-weight: bold;
+	color: #f72464;
+}
+
+.section-button-wrapper {
+	text-align: center;
+}
+.button-outline {
+	display: inline-block;
+	padding: 10px 40px 11px;
+	background: #ffffff;
+	border: 1px solid #f72464;
+	border-radius: 4px;
+
+	font-family: "Playfair Display", serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 1;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #777777;
+	transition: background-color 0.35s ease-in, color 0.35s ease-in;
+}
+
+.button-outline:hover {
+	background-color: #f72464;
+	color: #fff;
 }
