@@ -1,0 +1,72 @@
+.posts-wrapper {
+	margin-bottom: 75px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	row-gap: 40px; /*Значение ширины межстрочного интервала*/
+}
+.post {
+	max-width: 570px;
+	display: flex;
+	justify-content: space-between;
+	flex-grow: 1; /*определяет как много свободного пространства во flex-контейнере должно быть назначено текущему элементу (flex grow factor — «коэффициент увеличения flex»).*/
+}
+
+.post-content {
+	max-width: 370px;
+	/*позиционируем блок с текстом по центру картинки*/
+	display: flex; /*все элементы выстроятся в ряд*/
+	flex-direction: column; /*расположим элементы в колонку*/
+	justify-content: center; /*центрируем по главной оси(здесь: по вертикальной)*/
+}
+
+.post__title {
+	margin: 0;
+	margin-bottom: 10px;
+	font-family: "Playfair Display", serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: #000000;
+}
+
+.post__text {
+	margin: 0 0 10px;
+	font-family: "Noto Sans";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.3;
+}
+
+/*ссылка со стрелочкой*/
+.post__read-more {
+	font-family: "Playfair Display";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	text-decoration: none;
+	color: #000000;
+}
+/*добавим иконку-стрелочку справа*/
+.post__read-more::after {
+	content: "";
+	display: inline-block;
+	margin-left: 2px;
+	width: 24px;
+	height: 24px;
+	vertical-align: text-top;
+
+	background-image: url(./../../img/icons/chevron-right.svg);
+	background-position: center;
+	background-size: auto;
+	background-repeat: no-repeat;
+
+	transition: margin 0.3s ease-in;
+}
+.post__read-more:hover {
+	color: rgb(224, 64, 6);
+}
+.post__read-more:hover::after {
+	margin-left: 15px;
+}
