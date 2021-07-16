@@ -12,11 +12,23 @@
 	flex-direction: column;
 	align-items: center;
 }
+
 .footer__nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
 	margin-bottom: 25px;
 	font-family: "Noto Sans";
 	font-size: 14px;
 	text-transform: uppercase;
+}
+@media (min-width: 425px) {
+	.footer__nav {
+		flex-direction: row;
+		justify-content: center;
+	}
 }
 .footer__nav a {
 	text-decoration: none;
@@ -27,7 +39,13 @@
 }
 /*правым ссылкам назначим отступы*/
 .footer__nav > a + a {
-	margin-left: 30px;
+	margin-top: 20px;
+}
+@media (min-width: 425px) {
+	.footer__nav > a + a {
+		margin-top: 0;
+		margin-left: 30px;
+	}
 }
 
 .footer__socials {

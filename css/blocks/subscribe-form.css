@@ -1,19 +1,31 @@
 .subscribe-form {
 	display: flex;
-	justify-content: center;
+	align-items: stretch;
+	flex-direction: column;
+}
+@media (min-width: 425px) {
+	.subscribe-form {
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+	}
 }
 .subscribe-form > * + * {
 	/*обратились ко всем элементам внутри класса, имеющим соседа справа*/
-	margin-left: 10px;
+	margin-top: 10px;
+}
+@media (min-width: 425px) {
+	.subscribe-form > * + * {
+		margin-top: 0;
+		margin-left: 10px;
+	}
 }
 
 /*кнопка ввода*/
 .subscribe-form__input {
 	padding-left: 10px;
 	padding-right: 10px;
-
 	height: 42px;
-	width: 230px;
 	background: #ffffff;
 	border: 1px solid #f72464;
 	border-radius: 4px;
@@ -24,6 +36,11 @@
 	font-size: 16px;
 	line-height: 1;
 	color: #000;
+}
+@media (min-width: 425px) {
+	.subscribe-form__input {
+		width: 230px;
+	}
 }
 .subscribe-form__input::placeholder {
 	color: #999999;

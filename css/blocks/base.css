@@ -9,8 +9,15 @@
 	font-family: "Noto Sans", sans-serif;
 }
 
+img {
+	display: block;
+	max-width: 100%;
+}
+
 .container {
-	width: 1170px;
+	max-width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
 	margin: 0 auto;
 }
 
@@ -19,21 +26,39 @@
 }
 
 .section-new {
-	padding-top: 60px;
-	padding-bottom: 70px;
+	padding-top: 30px;
+	padding-bottom: 35px;
 }
 
 .section-featured {
-	padding-top: 70px;
-	padding-bottom: 70px;
+	padding-top: 35px;
+	padding-bottom: 35px;
 }
 
 .section-blog {
-	padding-top: 70px;
-	padding-bottom: 45px;
+	padding-top: 35px;
+	padding-bottom: 25px;
 }
 
 .section-subscribe {
-	padding-top: 45px;
-	padding-bottom: 100px;
+	padding-top: 25px;
+	padding-bottom: 50px;
+}
+@media (min-width: 992px) {
+	.section-new {
+		padding-top: 60px;
+		padding-bottom: 70px;
+	}
+	.section-featured {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+	.section-blog {
+		padding-top: 70px;
+		padding-bottom: 45px;
+	}
+	.section-subscribe {
+		padding-top: 45px;
+		padding-bottom: 100px;
+	}
 }

@@ -2,8 +2,9 @@
 	margin-bottom: 40px;
 	display: flex;
 	flex-wrap: wrap; /*сделали перенос элементов блока*/
-	justify-content: space-between;
+	justify-content: center;
 	row-gap: 40px; /*отступ между рядами блока*/
+	column-gap: 30px;
 }
 
 .product-link {
@@ -14,7 +15,7 @@
 
 /*катрточка-ссылка при наведении меняет прозрачность(светлеет)*/
 .product-link:hover {
-	opacity: 0.8;
+	opacity: 0.93;
 }
 
 .product {

@@ -1,15 +1,36 @@
 .posts-wrapper {
-	margin-bottom: 75px;
+	margin-bottom: 35px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	row-gap: 40px; /*Значение ширины межстрочного интервала*/
+	column-gap: 30px;
+}
+@media (min-width: 992px) {
+	.posts-wrapper {
+		margin-bottom: 75px;
+	}
 }
 .post {
 	max-width: 570px;
 	display: flex;
 	justify-content: space-between;
 	flex-grow: 1; /*определяет как много свободного пространства во flex-контейнере должно быть назначено текущему элементу (flex grow factor — «коэффициент увеличения flex»).*/
+	align-items: flex-start; /*Блоки прижаты к началу поперечной оси.*/
+	column-gap: 15px;
+}
+@media (min-width: 400px) {
+	.post {
+		column-gap: 30px;
+	}
+}
+.post__img {
+	max-width: 120px;
+}
+@media (min-width: 992px) {
+	.post__img {
+		max-width: 170px;
+	}
 }
 
 .post-content {

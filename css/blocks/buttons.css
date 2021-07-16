@@ -2,14 +2,14 @@
 .button {
 	/*Что бы корректно работали свойста блочной модели пропишем : */
 	display: inline-block; /*ширина при этом будет по ширине контента и не будет растягиваться*/
-	padding: 11px 33px 14px;
+	padding: 0.42307em 1.26923em 0.538461em;
 	background-color: #f72464;
 	box-shadow: 0px 4px 15px rgba(123, 12, 46, 0.35);
 	border-radius: 4px;
 	font-family: "Playfair Display", serif;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 26px;
+	font-size: 22px;
 	line-height: 1;
 	text-align: center;
 	text-decoration: none;
@@ -17,6 +17,11 @@
 
 	/*для применении hover пропишем плавность изменения тени и фона*/
 	transition: box-shadow 0.2s ease-in, background-color 0.2s ease-in;
+}
+@media (min-width: 992px) {
+	.button {
+		font-size: 26px;
+	}
 }
 .button:hover {
 	box-shadow: 0px 4px 35px rgba(123, 12, 45, 0.76);

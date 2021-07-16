@@ -1,6 +1,7 @@
 @import "./blocks/base.css";
 @import "./blocks/buttons.css";
 
+@import "./blocks/menu-icon.css";
 @import "./blocks/nav.css";
 @import "./blocks/header.css";
 @import "./blocks/section-header.css";

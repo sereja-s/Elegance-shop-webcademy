@@ -1,5 +1,10 @@
 .nav {
-	padding: 40px 0;
+	padding: 20px 0;
+}
+@media (min-width: 992px) {
+	.nav {
+		padding: 40px 0;
+	}
 }
 
 .nav__row {
@@ -8,9 +13,8 @@
 	align-items: center;
 }
 
-.nav__logo,
 a.nav__logo {
-	margin-right: 83px;
+	margin-right: 15px;
 	text-decoration: none;
 	font-family: "Noto Sans";
 	font-style: normal;
@@ -19,21 +23,88 @@ a.nav__logo {
 	line-height: 38px;
 	color: #000000;
 }
+
+@media (min-width: 992px) {
+	a.nav__logo {
+		margin-right: 83px;
+	}
+}
+
 a.nav__logo:hover {
-	text-decoration: underline;
+	color: rgb(245, 7, 7);
+}
+
+/*сделаем серый фон для не активной части смартфона*/
+.nav__list-holder {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(128, 128, 128, 0.582);
+	z-index: 9;
+	/* opacity: 0; */
+	transition: opacity 0.5s ease-in;
+}
+
+.nav__list-holder--visible {
+	display: block;
+	/* opacity: 1; */
+}
+@media (min-width: 992px) {
+	.nav__list-holder {
+		display: block;
+		/* opacity: 1; */
+		position: static;
+		background-color: transparent;
+	}
 }
 
 .nav__list {
-	display: flex;
-	font-family: "Noto Sans";
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 260px;
+	background-color: coral;
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+	color: cornsilk;
+	z-index: 9;
+	transform: translateX(-100%);
+	transition: transform 0.5s ease-in;
+}
+.nav__list-holder--visible .nav__list {
+	transform: translateX(0%);
+}
+
+@media (min-width: 992px) {
+	.nav__list {
+		display: flex;
+		font-family: "Noto Sans";
+		position: static;
+		width: auto;
+		background-color: transparent;
+		transform: none;
+		color: #000;
+	}
 }
 
 .nav__item {
-	margin-right: 30px;
 	font-size: 18px;
+	display: block;
+	padding: 30px 15px;
+	border-bottom: 1px solid rgb(243, 13, 13);
+}
+
+@media (min-width: 992px) {
+	.nav__item {
+		margin-right: 30px;
+		padding: 0;
+		border-bottom: none;
+	}
 }
 
 .nav__item:last-child {
@@ -42,7 +113,7 @@ a.nav__logo:hover {
 
 .nav__link {
 	text-decoration: none;
-	color: #000;
+	color: inherit; /*цвет наследуется из блока родителей*/
 }
 
 .nav__link:hover {
@@ -52,6 +123,12 @@ a.nav__logo:hover {
 .nav__cart {
 	/*позиционируем корзину*/
 	margin-left: auto; /* предоставляtn браузеру самостоятельно вычислять отступ элемента */
+	margin-right: 55px;
+}
+@media (min-width: 992px) {
+	.nav__cart {
+		margin-right: 0px;
+	}
 }
 
 .nav__cart-link {

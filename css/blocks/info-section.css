@@ -4,6 +4,7 @@
 	background: url("./../../img/info-block/bg-1.jpg");
 	background-size: cover; /*Масштабирует картинку так, чтобы она накрыла собой весь блок с сохранением пропорций. Картинка будет стараться поместиться целиком, но это не всегда будет получаться, поэтому какая-то ее часть будет обрезаться. Блок всегда будет покрыт картинкой целиком.*/
 	background-position: center;
+	text-align: center;
 }
 .info-section::before {
 	content: ""; /*обязательное свойство для псевдоэлемента*/
@@ -21,14 +22,30 @@
 	position: relative; /*что-бы применилось свойство z-index*/
 	z-index: 1; /*что бы кнопка была выше фона*/
 	display: flex; /*элементы блока разместятся в строку*/
+	flex-direction: column;
 	justify-content: space-between;
+	align-items: center; /*Блоки стоят по центру поперечной оси (кноика не будет растягиваться на весь экран в мобильной версии)*/
 }
 .info-section__title {
 	margin: 0; /*сбросили отступы по умолчанию для заголовков*/
+	margin-bottom: 25px;
 	font-family: "Playfair Display", serif;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 52px;
-	line-height: 1;
+	font-size: 32px;
+	line-height: 1.3;
 	color: #ffffff;
+}
+@media (min-width: 992px) {
+	.info-section {
+		text-align: left;
+	}
+	.info-section__row {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.info-section__title {
+		font-size: 52px;
+		margin-bottom: 0;
+	}
 }
